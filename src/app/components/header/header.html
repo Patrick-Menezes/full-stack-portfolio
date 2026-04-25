@@ -1,16 +1,37 @@
+<header class="fixed top-0 left-0 z-[100] w-full border-b border-white/5 bg-zinc-950/90 backdrop-blur-md">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <h1 class="font-black text-xl tracking-[0.2em] uppercase font-mono italic">
+      <span class="text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">Patrick</span>
+      <span class="text-indigo-500 drop-shadow-[0_0_10px_rgba(99,102,241,0.5)]">.Dev</span>
+    </h1>
 
-<header class="bg-[url('/images/header-bg.jpg')] bg-cover bg-end h-26 text-center text-white
- flex items-center justify-center  w-full  px-8 py-4 border-b border-white backdrop-blur-md
- ">
-<div class="basis-3/6"> 
-    <h1 class="font-bold text-indigo-400 text-3xl">&lt;PORTFOLIO/&gt;</h1>
-  
+    <nav class="hidden md:flex items-center gap-8 text-[11px] font-bold uppercase tracking-[0.2em]">
+      <a href="#" class="text-indigo-400 hover:text-indigo-300 transition-colors">Início</a>
+      <a href="#skills" class="text-slate-400 hover:text-white transition-colors">Habilidades</a>
+      <a href="#projects" class="text-slate-400 hover:text-white transition-colors">Projetos</a>
+      <a href="#contact" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-all">
+        Contato
+      </a>
+    </nav>
 
-</div>
-<div class="basis-3/6 flex justify-end gap-6">
-<a href="" style="text-decoration: underline; color:#b9fac9;">Home</a>
-<a href="sobre.html">Sobre</a>
-<a href="trabalhos.html">Meus trabalhos</a>
-<a href="contato.html">contato</a>
-</div>
+    <button (click)="toggleMenu()" class="md:hidden text-white p-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        @if (!isMenuOpen()) {
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        } @else {
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        }
+      </svg>
+    </button>
+  </div>
+
+  <div [class.hidden]="!isMenuOpen()" class="md:hidden bg-zinc-950 border-b border-white/5 animate-fade-in">
+    <nav class="flex flex-col p-6 gap-6 text-sm font-bold uppercase tracking-widest text-center">
+      <a href="#" (click)="isMenuOpen.set(false)" class="text-slate-400 hover:text-white">Início</a>
+      <a href="#skills" (click)="isMenuOpen.set(false)" class="text-slate-400 hover:text-white">Habilidades</a>
+      <a href="#projects" (click)="isMenuOpen.set(false)" class="text-slate-400 hover:text-white">Projetos</a>
+      <a href="#contact" (click)="isMenuOpen.set(false)" class="text-indigo-500">Contato</a>
+    </nav>
+  </div>
 </header>
