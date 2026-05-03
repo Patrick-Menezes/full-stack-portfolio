@@ -1,7 +1,0 @@
-{
-  "routes": {
-    "/full-stack-portfolio": {},
-    "/full-stack-portfolio/minishop": {},
-    "/full-stack-portfolio/order-service": {}
-  }
-}
