@@ -5,7 +5,8 @@ export const routes: Routes = [
 {path:"", loadComponent: () => import('./components/page/page').then(m => m.Page)
 },
 {path:"minishop", loadComponent: () => import('./projects/minishop/minishop').then(m => m.Minishop)}
-
+,
+{path:"order-service", loadComponent: () => import('./projects/order-service/order-service').then(m => m.OrderService)}
 
 
 ];

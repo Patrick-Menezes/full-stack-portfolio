@@ -1,0 +1,146 @@
+<app-header></app-header>
+
+<div class="min-h-screen bg-[#0f1115] relative overflow-hidden text-white font-sans pb-24">
+  
+  <!-- Luzes de Fundo (Blobs) -->
+  <div class="absolute top-[-5%] right-[-5%] w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] -z-10"></div>
+  <div class="absolute middle-0 left-[-10%] w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[120px] -z-10"></div>
+
+  <main class="max-w-6xl mx-auto pt-20 px-6 relative z-10">
+    
+    <!-- Header do Projeto -->
+    <header class="mb-16 border-b border-gray-800/50 pb-12">
+      <a routerLink="/" class="text-gray-500 hover:text-indigo-400 transition-colors mb-6 inline-flex items-center gap-2 group">
+        <span class="group-hover:-translate-x-1 transition-transform">←</span> Voltar para Home
+      </a>
+      
+      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-white via-indigo-300 to-indigo-500 bg-clip-text text-transparent mb-6">
+        Order Service - CRUD de Ordem de Serviço
+      </h1>
+
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div>
+          <h2 class="text-indigo-400 uppercase tracking-widest text-sm font-bold mb-3">Pretensão e Objetivo</h2>
+          <p class="text-gray-300 text-lg leading-relaxed font-light">
+            Busquei aprender sobre a construção e consumo de APIs RESTful usando .NET 8, com foco em funcionalidades básicas, porém essenciais, como adição, atualização, exclusão e listagem de ordens de serviço. 
+          </p>
+        </div>
+        <div>
+          <h2 class="text-red-400 uppercase tracking-widest text-sm font-bold mb-3">O que pratiquei</h2>
+          <div class="flex flex-wrap gap-3 mb-8">
+            <span class="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20 shadow-[0_0_15px_rgba(34,211,238,0.1)]">
+              API usando .NET 8, MySQL e Angular 21
+            </span>
+            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs rounded-lg border border-emerald-500/20">
+              Construção de APIs e Swagger
+            </span>
+            <span class="px-3 py-1 bg-amber-500/10 text-amber-500 text-xs rounded-lg border border-amber-500/20">
+              Consumo de APIs em Angular
+            </span>
+            <span class="px-3 py-1 bg-indigo-600/10 text-indigo-400 text-xs rounded-lg border border-indigo-600/20">
+              Bootstrap
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Seções de Demonstração -->
+    <section class="space-y-32">
+      
+      <!-- Etapa 1: Inicialização -->
+      <article class="flex flex-col md:flex-row gap-12 items-center">
+        <div class="w-full md:w-3/5 group">
+          <div class="relative rounded-2xl overflow-hidden border border-gray-800 bg-[#161920]">
+             <video class="w-full h-full object-cover" controls playsinline>
+               <source src="files/starting.mp4" type="video/mp4">
+               Seu navegador não suporta a tag de vídeo.
+             </video>
+             <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none"></div>
+          </div>
+        </div>
+        <div class="w-full md:w-2/5">
+          <span class="text-indigo-500 font-mono text-sm">01. Iniciando programas</span>
+          <h3 class="text-3xl font-bold mt-2 mb-4">Uso geral</h3>
+          <p class="text-gray-400 font-light leading-relaxed">
+            Demonstração da inicialização de ambos os projetos e comunicação entre eles. O vídeo mostra o processo de execução do backend e frontend, destacando a interação entre os dois e a configuração inicial necessária para colocar o sistema em funcionamento.
+          </p>
+        </div>
+      </article>
+
+      <!-- Etapa 2: Adicionando Serviços -->
+      <article class="flex flex-col md:flex-row-reverse gap-12 items-center">
+        <div class="w-full md:w-3/5 group">
+          <div class="relative rounded-2xl overflow-hidden border border-gray-800 bg-[#161920]">
+             <video class="w-full h-full object-cover" controls playsinline>
+               <source src="files/addService.mp4" type="video/mp4">
+               Seu navegador não suporta a tag de vídeo.
+             </video>
+             <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none"></div>
+          </div>
+        </div>
+        <div class="w-full md:w-2/5">
+          <span class="text-red-500 font-mono text-sm">02. Adicionando Serviços</span>
+          <h3 class="text-3xl font-bold mt-2 mb-4">Usando POST</h3>
+          <p class="text-gray-400 font-light leading-relaxed">
+            Demonstração da utilização do método POST para adicionar novos serviços ao sistema. O vídeo mostra o processo de criação de um novo serviço, incluindo o preenchimento dos campos necessários e a submissão do formulário, tanto pelo Swagger quanto pelo frontend.
+          </p>
+        </div>
+      </article>
+
+      <!-- Etapa 3: Removendo um serviço -->
+      <article class="flex flex-col md:flex-row gap-12 items-center">
+        <div class="w-full md:w-3/5 group">
+          <div class="relative rounded-2xl overflow-hidden border border-gray-800 bg-[#161920]">
+             <video class="w-full h-full object-cover" controls playsinline>
+               <source src="files/getDelete.mp4" type="video/mp4">
+               Seu navegador não suporta a tag de vídeo.
+             </video>
+             <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none"></div>
+          </div>
+        </div>
+        <div class="w-full md:w-2/5">
+          <span class="text-indigo-500 font-mono text-sm">03. Removendo um serviço</span>
+          <h3 class="text-3xl font-bold mt-2 mb-4">Métodos GET e DELETE</h3>
+          <p class="text-gray-400 font-light leading-relaxed">
+            Demonstrando o uso dos métodos para recuperar uma ordem de serviço específica usando GET e a remoção de um serviço usando DELETE. O vídeo mostra como buscar detalhes de um serviço existente e, em seguida, como excluir um serviço do sistema, destacando a funcionalidade de gerenciamento de serviços.
+          </p>
+        </div>
+      </article>
+
+      <!-- Etapa 4: Atualização -->
+      <article class="flex flex-col md:flex-row-reverse gap-12 items-center">
+        <div class="w-full md:w-3/5 group">
+          <div class="relative rounded-2xl overflow-hidden border border-gray-800 bg-[#161920]">
+             <video class="w-full h-full object-cover" controls playsinline>
+               <source src="files/putPatch.mp4" type="video/mp4">
+               Seu navegador não suporta a tag de vídeo.
+             </video>
+             <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none"></div>
+          </div>
+        </div>
+        <div class="w-full md:w-2/5">
+          <span class="text-red-500 font-mono text-sm">04. Atualização</span>
+          <h3 class="text-3xl font-bold mt-2 mb-4">Métodos PUT e PATCH</h3>
+          <p class="text-gray-400 font-light leading-relaxed">
+            Demonstração do processo de atualização de um serviço usando os métodos PUT e PATCH. O vídeo mostra como modificar as informações de um serviço existente, destacando a diferença entre os dois métodos: PUT para substituição completa e PATCH para atualização parcial dos dados do serviço, incluindo casos de erro de requisição quando o formulário é mal preenchido.
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Footer de Conclusão -->
+    <footer class="mt-32 p-12 bg-gradient-to-t from-indigo-600/10 to-transparent border-t border-indigo-500/20 rounded-t-3xl text-center">
+      <h4 class="text-2xl font-bold mb-4">Gostou da implementação técnica?</h4>
+      <p class="text-gray-400 mb-8">Você pode conferir o código-fonte completo ou entrar em contato para conversarmos sobre este projeto.</p>
+      <div class="flex justify-center gap-4">
+        <a href="https://github.com/Patrick-Menezes/ServiceManager" target="_blank" rel="noopener noreferrer" class="px-8 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-all">GitHub Repo</a>
+        <a href="#contact" class="px-8 py-3 border border-gray-700 rounded-full font-bold hover:bg-gray-800 transition-all">Entre em Contato</a>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<app-footer></app-footer>
